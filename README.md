@@ -89,5 +89,3 @@ The solution leverage GCP GKE, PUBSUB service, please refer the pricing docs to 
 [GKE Pricing Docs](https://cloud.google.com/kubernetes-engine/pricing)
 
 [PUBSUB Pricing Docs](https://cloud.google.com/pubsub/pricing#pubsub)
-
-change
