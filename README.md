@@ -1,17 +1,17 @@
 # Connect Kafka to Bigquery using Kafka connect pubsub connector quick start guide
 This guide give the simple steps for ingesting kafka message using Kafka connect pubsub connector. By using this guide, customer who is using kafka as message broker can quickly connect kafka data source to Bigquey.
 
-* Introduction
-* Architecture
+* [Introduction](#introduction)
+* [Architecture](#architecture)
 ![alt text](architecture/images/kafkapubsubbigquery.png)
-* How-To
-    * Create GKE Cluster
-    * Build Kafka connect image with pubsub connector
-    * Deploy Kafka connect resource
-    * Deploy Kafka connect connector resource
-    * Logging
-    * Metric
-    * Pricing
+* [How-To](#how-to)
+    * [Create GKE Cluster](#create-gke-cluster)
+    * [Build Kafka connect image with pubsub connector](#build-kafka-connect-image-with-pubsub-connector)
+    * [Deploy Kafka connect resource](#deploy-kafka-connect-resource)
+    * [Deploy Kafka connect connector resource](#deploy-kafka-connect-connector-resource)
+    * [Logging](#logging)
+    * [Metric](#metric)
+    * [Pricing](#pricing)
 
 ## Introduction
 This guide give a deployment sample using [Strimzi Kafka Operator](https://strimzi.io/), which deploy and configure Apache Kafka Connect Cluster on Kubernetes. Google provide 1st party [kafka connect sink connector](https://github.com/googleapis/java-pubsub-group-kafka-connector) , which provide the capability to consume kafka topic messages to google cloud pubsub, cloud pubsub give the out-of-box bigquery subscribe capbility to ingest message data to Bigquery. For customers that has Kafka message broker installbase, this guide will be a fast start to bridge kafka and bigquery together, then build on real-time warehouse base on kafka messages.
