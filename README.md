@@ -47,6 +47,20 @@ Install Strimizi Kafka Operator
 Refer Strimzi Install Guide(https://strimzi.io/docs/operators/in-development/deploying.html#deploying-cluster-operator-str), change the namespace to the namespace you created before.
 
 ### Build Kafka connect image with pubsub connector
+Download the latest kafka-pubsub-connector jar, then place the jar file into the connector-build/plugins/ folder path.
+
+Build image locally
+```
+# run in connector-build folder
+docker build -t kafkaconnect .
+```
+
+Tag image and push to google container registry
+```
+docker tag kafkaconnect gcr.io/${PROJECT_ID}/kafka/kafkaconnect
+
+docker push gcr.io/${PROJECT_ID}/kafka/kafkaconnect
+```
 
 ### Deploy Kafka connect resource
 Edit the kubernetes/kafka-connect.yaml, change the value with <>.
