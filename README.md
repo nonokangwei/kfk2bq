@@ -3,6 +3,7 @@ This guide give the simple steps for ingesting kafka message using Kafka connect
 
 * Introduction
 * Architecture
+![alt text](architecture/images/kafkapubsubbigquery.png)
 * How-To
     * Create GKE Cluster
     * Build Kafka connect image with pubsub connector
