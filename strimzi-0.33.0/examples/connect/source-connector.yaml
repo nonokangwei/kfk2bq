@@ -5,16 +5,19 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaConnector
 metadata:
-  name: my-source-connector
+  name: cpssinkconnector
   labels:
     # The strimzi.io/cluster label identifies the KafkaConnect instance
     # in which to create this connector. That KafkaConnect instance
     # must have the strimzi.io/use-connector-resources annotation
     # set to true.
-    strimzi.io/cluster: my-connect-cluster
+    strimzi.io/cluster: demo-kafka-connect-cluster
 spec:
-  class: org.apache.kafka.connect.file.FileStreamSourceConnector
+  class: com.google.pubsub.kafka.sink.CloudPubSubSinkConnector
   tasksMax: 2
   config:
-    file: "/opt/kafka/LICENSE"
-    topic: my-topic
+    topics: quickstart-events
+    key.converter: org.apache.kafka.connect.storage.StringConverter
+    value.converter: org.apache.kafka.connect.converters.ByteArrayConverter
+    cps.project: project-kangwe-poc
+    cps.topic: kafkatopic

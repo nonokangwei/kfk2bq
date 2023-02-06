@@ -1,0 +1,16 @@
+    bq query \
+    --use_legacy_sql=false \
+    --destination_table=demo.mytable \
+    --display_name='My Scheduled Query' \
+    --schedule='every 24 hours' \
+    --replace=true \
+    'SELECT
+      COUNT(1)
+    FROM
+      demo.demotable'
+
+bq update \
+--transfer_config \
+--target_dataset=demo \
+--display_name='My Scheduled Query' \
+--params='{"query":"SELECT 1 from demo.demotable","destination_table_name_template":"mytable,"write_disposition":"WRITE_TRUNCATE"}' \
