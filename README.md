@@ -7,6 +7,7 @@ This guide give the simple steps for ingesting kafka message using Kafka connect
 * [How-To](#how-to)
     * [Create GKE Cluster](#create-gke-cluster)
     * [Build Kafka connect image with pubsub connector](#build-kafka-connect-image-with-pubsub-connector)
+    * [Prepare pubsub topic/subscription]()
     * [Deploy Kafka connect resource](#deploy-kafka-connect-resource)
     * [Deploy Kafka connect connector resource](#deploy-kafka-connect-connector-resource)
     * [Logging](#logging)
@@ -67,6 +68,9 @@ Edit the kubernetes/kafka-connect.yaml, change the value with <>.
 ```
 kubectl apply -f kubernetes/kafka-connect.yaml -n <namespace-name>
 ```
+### Prepare pubsub topic/subscription
+Refer pubsub [docs](https://cloud.google.com/pubsub/docs/bigquery) to create the topic/subscription.
+
 ### Deploy Kafka connect connector resource
 Edit the kubernetes/kafka-connector-task-config.yaml, change the value with <>.
 ```
