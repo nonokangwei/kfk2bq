@@ -7,7 +7,7 @@ This guide give the simple steps for ingesting kafka message using Kafka connect
 * [How-To](#how-to)
     * [Create GKE Cluster](#create-gke-cluster)
     * [Build Kafka connect image with pubsub connector](#build-kafka-connect-image-with-pubsub-connector)
-    * [Prepare pubsub topic/subscription]()
+    * [Prepare pubsub topic/subscription](#prepare-pubsub-topicsubscription)
     * [Deploy Kafka connect resource](#deploy-kafka-connect-resource)
     * [Deploy Kafka connect connector resource](#deploy-kafka-connect-connector-resource)
     * [Logging](#logging)
